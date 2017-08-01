@@ -1,0 +1,51 @@
+/*!
+Theme Name:		Twenty Fourteen Footbag
+Theme URI:		https://wordpress.org/themes/twentyfourteen/
+Author:			Web First Designs
+Author URI:		http://WebFirstDesigns.com
+Description:	Starter child theme for Twenty Fourteen
+Tags:			
+Version:		2.0
+License:        GNU General Public License v2 or later
+License URI:    http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:	twentyfourteen-footbag
+Template:		twentyfourteen
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Site
+2.0 Pages
+    2.1 Freestyle Moves
+3.0 Custom Post Types & Taxonomies
+    3.1 Freestyle Moves
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1.0 Site Background & Borders
+--------------------------------------------------------------*/
+@import "site/site";
+
+/*--------------------------------------------------------------
+2.0 Pages
+--------------------------------------------------------------*/
+
+	/* 2.1 Freestyle Moves
+	----------------------------------------------------------*/
+	@import "pages/freestyle";
+
+/*--------------------------------------------------------------
+3.0 Custom Post Types & Taxonomies
+--------------------------------------------------------------*/
+
+	/* 3.1 Freestyle Moves
+	----------------------------------------------------------*/
+	@import "cpt/taxonomy-moves";
+
+	/* 3.2 Freestyle Moves
+	----------------------------------------------------------*/
+	@import "cpt/single-moves";
