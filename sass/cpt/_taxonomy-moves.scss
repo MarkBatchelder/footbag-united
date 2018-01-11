@@ -1,52 +1,111 @@
 .taxonomy-moves {
-    display: flex;
-    justify-content: space-between;
-    margin: 12px;
-    padding: 12px;
+    margin: 0 auto 48px;
+    width: 90%;
+    table-layout: fixed;
+    border-collapse: collapse;
     font-size: 12px;
     
-    .entry-header {
-        flex-basis: 20%;
-        margin: 0;
-        padding: 0;
+    th,
+    td {
+        border: 1px solid;
+        vertical-align: top;
+    }
     
-        h1.entry-title {
+    tr:nth-child(even) td {
+        background-color: #f2f2f2;
+    }
+    
+    ::before,
+    ::after { //For some damn reason. :P
+        display: none;
+    }
+    
+    .move-thead {
+        font-size: 14px;
+        background-color: #d3e7ce;
+        
+        .move-th-1 {
+            padding: 12px;
+            width: 25%;
+        }
+        
+        .move-th-2 {
+            padding: 12px;
+            width: 10%;
+            text-align: center;
+        }
+        
+        .move-th-3 {
+            padding: 12px;
+            width: 50%;
+        }
+        
+        .move-th-4 {
+            padding: 12px;
+            width: 15%;
+            text-align: center;
+        }
+    }
+    
+    .move-header {
+        margin: 0;
+        padding: 6px;
+        width: 25%;
+    
+        .move-title {
+            margin: 6px;
+            font-family: Acme, Georgia, serif;
             font-size: 14px;
+            letter-spacing: .5px;
         }
 
-        h2.entry-subtitle {
-            margin-top: 0;
+        .move-subtitle {
+            margin: 6px;
             font-size: 12px;
             font-weight: normal;
+        }
+        
+        .move-type {
+            margin: 6px;
+            list-style: none;
         }
     }
     
     .move-basics {
-        flex-basis: 10%;
+        padding: 6px;
+        width: 10%;
         
         .difficulty {
-            display: block;
+            margin: 6px;
+            text-align: center;
         }
 
         .adds {
-            display: block;
+            margin: 6px;
+            text-align: center;
+            font-size: 10px;
         }
     }
 
     .move-details {
+<<<<<<< HEAD
         flex-basis: 60%;
+=======
+        width: 50%;
+>>>>>>> develop
 
         .notation1 {
-            margin: 0 0 12px;
+            margin: 12px;
             font-size: 12px;
         }
 
         .notation2 {
-            margin: -6px 0 12px;
+            margin: -6px 12px 12px;
             font-size: 12px;
         }
 
         .description {
+            margin: 12px;
             text-align: justify;
         }
 
@@ -56,7 +115,8 @@
     }
     
     .move-video {
-        flex-basis: 10%;
-        text-align: right;
+        padding: 12px;
+        width: 15%;
+        text-align: center;
     }
 }

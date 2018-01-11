@@ -1,43 +1,49 @@
 .single-move {
     
-    .technical-name {
-        margin-bottom: 36px;
+    .entry-header {
+        
+        h1 {
+            float: left;
+            text-transform: none;
+            color: #24890d;
+        }
+
+        .entry-meta {
+            clear: none;
+            float: right;
+            margin: 9.5px 0;
+            text-transform: none;
+        }
+    }
+    
+    .move-technical {
+        clear: both;
+        margin-bottom: 24px;
     }
     
     .move-basics {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        clear: both;
         margin-bottom: 24px;
         
         .difficulty {
-            flex-grow: 1;
             float: left;
         }
         
         .adds {
-            flex-grow: 1;
             float: right;
             text-align: right;
         }
-    }
-    
-    /* Clearing floats (If this works) */
-    .move-basics:before,
-    .move-basics:after {
-        content: "";
-        display: table;
     }
     
     .move-details {
         
         .notation1 {
             clear: both;
-            margin: 0 24px 24px;
+            margin: 0 0 24px;
         }
 
         .notation2 {
-            margin: -12px 24px 24px;
+            margin: -12px 0 24px;
         }
 
         .description {
@@ -47,6 +53,35 @@
         .example {
             text-align: justify;
             font-style: italic;
+        }
+    }
+    
+    .move-meta {
+        
+        a {
+            text-decoration: none;
+            color: #41a62a;
+        }
+        
+        a:active,
+        a:hover {
+            color: #24890d;
+        }
+        
+        .related-moves {
+            font-weight: bold;
+            color: #767676;
+        }
+        
+        .move-tags {
+            display: inline;
+            margin: 0;
+            
+            li {
+                display: inline;
+                margin-left: 6px;
+                list-style: none;
+            }
         }
     }
 }

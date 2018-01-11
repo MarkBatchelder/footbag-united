@@ -37,20 +37,13 @@
 
 				if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) :
 			?>
-			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'twentyfourteen' ), __( '1 Comment', 'twentyfourteen' ), __( '% Comments', 'twentyfourteen' ) ); ?></span>
+			<span class="comments-link"><?php comments_popup_link( __( 'Post a Video Example', 'twentyfourteen' ), __( '1 Video Example', 'twentyfourteen' ), __( '% Video Examples', 'twentyfourteen' ) ); ?></span>
 			<?php
 				endif;
 
 				edit_post_link( __( 'Edit', 'twentyfourteen' ), '<span class="edit-link">', '</span>' );
 			?>
 		</div><!-- .entry-meta -->
-        
-        <?php
-            if(get_field('technical_name'))
-            {
-                echo '<h2 class="entry-subtitle">' . get_field('technical_name') . '</h2>';
-            }
-        ?>
 	</header><!-- .entry-header -->
 
 	<?php if ( is_search() ) : ?>
@@ -62,6 +55,13 @@
 	<?php else : ?>
     
 	<div class="entry-content">
+        
+        <?php
+            if(get_field('technical_name'))
+            {
+                echo '<div class="move-technical"><strong>Technical Name:</strong> ' . get_field('technical_name') . '</div>';
+            }
+        ?>
 
         <div class="move-basics">
             <span class="difficulty"><strong>Adds:</strong> <?php the_field('difficulty'); ?></span>
@@ -91,6 +91,16 @@
                 {
                     echo '<p class="example"><strong>Example:</strong> ' . get_field('example') . '</p>';
                 }
+            ?>
+        </div>
+        
+        <div class="move-meta">
+            <span class="related-moves">Related Moves: </span>
+            <?php
+                echo get_the_term_list( $post->ID, 'move_difficulty', '<ul class="move-tags"><li>', '</li><li>', '</li>' );
+            ?>
+            <?php
+                echo get_the_term_list( $post->ID, 'move_type', '<li>', '</li> <li>', '</li></ul>' );
             ?>
         </div>
 

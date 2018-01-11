@@ -10,3 +10,74 @@
 .site-content .entry-header, .site-content .entry-content, .site-content .entry-summary, .site-content .entry-meta, .page-content {
     max-width: 750px;
 }
+
+.full-width {
+    
+    .page-header,
+    .archive-header {
+        margin: 0 0 60px 5%;
+        padding: 0;
+    }
+}
+
+.page-header,
+.archive-header {
+    max-width: none;
+    margin: 0 0 60px 5%;
+    padding: 0;
+    
+    h1 {
+        font-size: 36px;
+    }
+}
+
+.entry-title {
+    font-family: Acme, Georgia, serif;
+    text-transform: none;
+}
+
+.archive-title {
+    font-family: linux_biolinum_gregular, Georgia, serif;
+}
+
+.comment-reply-title {
+    text-transform: none;
+}
+
+.entry-content p {
+    text-align: justify;
+}
+
+.post-navigation {
+    max-width: 750px;
+    
+    .nav-links {
+        border-top: none;
+        border-bottom: none;
+    
+        a {
+            float: left;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            width: 50%;
+        }
+    }
+}
+
+/* Clearing floats */
+
+.entry-header:before,
+.entry-header:after,
+.move-basics:before,
+.move-basics:after,
+.post-navigation:before,
+.post-navigation:after {
+	content: "";
+	display: table;
+}
+
+.entry-header:after,
+.move-basics:after,
+.post-navigation:after {
+	clear: both;
+}
