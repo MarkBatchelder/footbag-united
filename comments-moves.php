@@ -76,7 +76,12 @@ if ( post_password_required() ) {
 	<?php endif; ?>
 
 	<?php endif; // have_comments() ?>
+	
+    <?php $comments_args = array(
+        // redefine your own textarea (the comment body)
+        'comment_field' => '<p class="comment-form-comment"><label for="comment">' . _x( 'Video URL', 'noun' ) . '</label><input type="url" id="comment" name="comment" placeholder="https://youtu.be/example" pattern="https?://.+" required aria-required="true"></input></p>',
+    ); ?>
 
-	<?php comment_form(); ?>
+    <?php comment_form( $comments_args ); ?>
 
 </div><!-- #comments -->
