@@ -18,7 +18,7 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area">
+<div id="comments" class="comments-area comments-moves">
 
 	<?php if ( have_comments() ) : ?>
 
@@ -27,13 +27,13 @@ if ( post_password_required() ) {
 			$comments_number = get_comments_number();
 			if ( '1' === $comments_number ) {
 				/* translators: %s: post title */
-				printf( _x( 'One video example of a &ldquo;%s&rdquo;', 'comments title', 'twentyfourteen' ), get_the_title() );
+				printf( _x( 'One Video Example of a &ldquo;%s&rdquo;', 'comments title', 'twentyfourteen' ), get_the_title() );
 			} else {
 				printf(
 					/* translators: 1: number of comments, 2: post title */
 					_nx(
-						'%1$s video example of a &ldquo;%2$s&rdquo;',
-						'%1$s video examples of a &ldquo;%2$s&rdquo;',
+						'%1$s Video Example of a &ldquo;%2$s&rdquo;',
+						'%1$s Video Examples of a &ldquo;%2$s&rdquo;',
 						$comments_number,
 						'comments title',
 						'twentyfourteen'
@@ -59,6 +59,8 @@ if ( post_password_required() ) {
 				'style'       => 'ol',
 				'short_ping'  => true,
 				'avatar_size' => 34,
+                'max_depth'   => 1,
+                'per_page'    => '',
 			) );
 		?>
 	</ol><!-- .comment-list -->
@@ -78,8 +80,8 @@ if ( post_password_required() ) {
 	<?php endif; // have_comments() ?>
 	
     <?php $comments_args = array(
-        // redefine your own textarea (the comment body)
-        'comment_field' => '<p class="comment-form-comment"><label for="comment">' . _x( 'Video URL', 'noun' ) . '</label><input type="url" id="comment" name="comment" placeholder="https://youtu.be/example" pattern="https?://.+" required aria-required="true"></input></p>',
+        'title_reply' => 'Post a Video Example',
+        'comment_field' => '<p class="comment-form-comment"><label for="comment">' . _x( 'Video URL', 'noun' ) . '&nbsp;<span class="req-symbol">*</span></label><input type="url" id="comment" name="comment" placeholder="https://youtu.be/example" pattern="https?://.+" required aria-required="true"></input></p>',
     ); ?>
 
     <?php comment_form( $comments_args ); ?>
